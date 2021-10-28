@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-#if __has_include(<hermes/hermes.h>)
+#if __has_include(<reacthermes/HermesExecutorFactory.h>)
 #define RCT_USE_HERMES 1
 #endif
 #if RCT_USE_HERMES

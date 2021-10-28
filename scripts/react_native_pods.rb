@@ -65,13 +65,13 @@ def use_react_native! (options={})
 
   if hermes_enabled
     pod 'React-Core/Hermes', :path => "#{prefix}/"
-    pod 'hermes-engine', '~> 0.8.0'
+    pod 'hermes-engine', '0.8.1'
     pod 'libevent', '~> 2.1.12'
   end
 end
 
 def use_flipper!(versions = {}, configurations: ['Debug'])
-  versions['Flipper'] ||= '~> 0.75.1'
+  versions['Flipper'] ||= '0.93.0'
   versions['Flipper-DoubleConversion'] ||= '1.1.7'
   versions['Flipper-Folly'] ||= '~> 2.5.3'
   versions['Flipper-Glog'] ||= '0.3.6'

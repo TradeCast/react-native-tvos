@@ -29,6 +29,9 @@ const HermesBadge = (): Node => {
     useTVEventHandler(myTVEventHandler);
   }
   const isDarkMode = useColorScheme() === 'dark';
+  const version =
+    global.HermesInternal?.getRuntimeProperties?.()['OSS Release Version'] ??
+    '';
   return (
     <View style={styles.badge}>
       {Platform.isTV ? (
@@ -50,7 +53,7 @@ const HermesBadge = (): Node => {
               color: isDarkMode ? Colors.light : Colors.dark,
             },
           ]}>
-          Engine: Hermes
+          {`Engine: Hermes ${version}`}{' '}
         </Text>
       ) : null}
     </View>
